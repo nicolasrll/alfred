@@ -1,3 +1,6 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+app-test-index:
+  path: /test/
+  controller: App\Controller\TestController:index
