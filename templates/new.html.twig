@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1 class="my-5 ml-5">Créer une nouvelle connaissance</h1>
+    {{ form_start(form) }}
+        <div class="errors">
+            {{ form_errors(form) }}
+        </div>
+        <div class="row">
+            <div class="col-11 mx-auto">
+                {{ form_row(form.name, {'label' : 'Nom', 'required':true}) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-11 mx-auto">
+                {{ form_row(form.chapo, {'help' : 'Le contenu affiché en aperçu en index'}) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-11 mx-auto">
+                {{ form_row(form.content) }}
+            </div>
+        </div>
+        <div class="row ml-5">
+            {{ form_row(form.save, {'label' : 'Créer', 'help' : 'All fields is required' }) }}
+        </div>
+    {{ form_end(form) }}
+{% endblock body %}
